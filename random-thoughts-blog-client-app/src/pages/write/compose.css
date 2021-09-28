@@ -1,0 +1,19 @@
+.compose {
+    padding-top: 50px;
+
+}
+
+.composeForm {
+
+}
+
+.composeFormGroup {
+    margin-left: 150px;
+}
+
+.composeIcon {
+    width: 25px;
+    height: 25px;
+    border-radius:50%;
+    border: 1px solid;
+}

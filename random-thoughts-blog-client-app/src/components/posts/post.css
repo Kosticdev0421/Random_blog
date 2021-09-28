@@ -1,0 +1,7 @@
+/* this takes the post previews and moves them according to how the screen is configured.  If full screen it will show the posts two  per row but if the screen is smaller all posts are vertical.*/
+.posts{
+    flex: 9;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}

@@ -1,0 +1,59 @@
+.post {
+   width: 385px;
+    margin: 0px 25px 40px 25px;
+
+}
+
+.postImg {
+    width: 100%;
+    height: 280px;
+    /* object-fit: cover;  this wasn't allowing the image to be fully viewed*/
+    border-radius: 15px;
+}
+
+.postInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.postCategories {
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    color: turquoise;
+    line-height: 20px;
+    margin-top: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.postTitles {
+    font-family: 'Stick No Bills', sans-serif;
+    font-style: 24px;
+    font-weight: 600;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.postDate {
+    font-family: 'Stick No Bills', sans-serif;
+    font-style: italic;
+    font-style: 13px;
+    color: orchid;
+    margin-top: 15px;
+}
+
+/* this section I used -webkit to make it so not all text is visible but is still there.  Lines 53-57 handle this feature. */
+.postDescription {
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    color: black;
+    line-height: 24px;
+    margin-top: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+
+}
