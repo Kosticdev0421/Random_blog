@@ -3,6 +3,11 @@ import "./compose.css";
 export default function Compose() {
 	return (
 		<div className="compose">
+				<img
+					className="composeImg" 
+					src="https://ih1.redbubble.net/image.2257440794.0814/poster,504x498,f8f8f8-pad,600x600,f8f8f8.jpg" 
+					alt="Just-a-girl-who-likes-rottweilers" 
+				/>
 			<form className="composeForm">
 				<div className="composeFormGroup">
 					<label htmlFor="fileInput">
