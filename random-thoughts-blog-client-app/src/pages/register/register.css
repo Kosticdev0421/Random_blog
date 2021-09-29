@@ -1,0 +1,53 @@
+.register{
+    /* The height calculation takes into account the full screen minus some pixels for the topbar */
+    height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: pink; */
+    background: url("https://images.unsplash.com/photo-1602498456745-e9503b30470b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80");
+    background-size: cover;
+}
+
+.registerTitle {
+    font-size: 50px;
+}
+
+.registerForm {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.registerForm > label {
+    margin: 10px 0px;
+}
+
+.registerInput {
+    padding: 10px;
+    background-color: lightblue;
+    border: none;
+}
+
+.registerButton {
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: pink;
+    border: 1px solid slategray;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.registerLoginButton {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: pink;
+    cursor: pointer;
+    border: 1px solid slategray;
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+}
