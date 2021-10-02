@@ -1,15 +1,13 @@
 import Post from "../post/Post";
-import "./post.css";
+import "./posts.css";
 
-export default function Posts() {
+// eslint-disable-next-line
+export default function Posts({ posts }) {
 	return (
-        <div className="posts">
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-        </div>
-    )
+		<div className="posts">
+			{posts.map((p) => (
+				<Post post={p} />
+			))}
+		</div>
+	);
 }

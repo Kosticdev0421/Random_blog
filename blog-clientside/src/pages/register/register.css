@@ -12,6 +12,9 @@
 
 .registerTitle {
     font-size: 50px;
+    font-family: 'Koh Santepheap', cursive;
+    /* font-weight: bold; */
+    /* font-style: italic; */
 }
 
 .registerForm {
@@ -26,14 +29,14 @@
 
 .registerInput {
     padding: 10px;
-    background-color: lightblue;
+    background-color: lightgray;
     border: none;
 }
 
 .registerButton {
     margin-top: 20px;
     cursor: pointer;
-    background-color: pink;
+    background-color: orchid;
     border: 1px solid slategray;
     color: black;
     border-radius: 10px;
@@ -44,7 +47,7 @@
     position: absolute;
     top: 60px;
     right: 20px;
-    background-color: pink;
+    background-color: orchid;
     cursor: pointer;
     border: 1px solid slategray;
     border-radius: 10px;

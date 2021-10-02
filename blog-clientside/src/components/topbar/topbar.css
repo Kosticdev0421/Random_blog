@@ -6,7 +6,7 @@
     top: 0px;
     display: flex;
     align-items: center;
-    font-family: 'Stick No Bills', sans-serif;
+    font-family: 'Koh Santepheap', cursive;
     z-index: 999;
 }
 
@@ -52,13 +52,13 @@
     font-size:18px;
     font-weight: 300;
     cursor: pointer;
-    color: pink;
+    color: slategray;
 }
 
 /* this styles the magnifying glass */
 .topSearchIcon {
     font-size: 18px;
-    color: pink;
+    color:orchid;
     cursor: pointer;
     margin-left: 15px;
     

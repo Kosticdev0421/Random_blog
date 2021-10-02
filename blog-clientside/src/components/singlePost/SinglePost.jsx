@@ -1,12 +1,31 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router";
+import axios from "axios";
 import './singlePost.css';
 
 
 
 export default function SinglePost() {
+  const location = useLocation();  
+  // console.log(location);
+  const path = location.pathname.split("/")[2];
+
+//   whenever this path changes fire this useEffect  
+  useEffect(() => {
+    const getPost = async () => {
+        const res = await axios.get("/posts/" + path );
+        console.log(res);
+    };
+    getPost();
+  }, [path] );
+
+
   return (
       <div className="singlePost">
         <div className="singlePostWrapper">
-            <img src="https://www.nicepng.com/png/detail/167-1676210_cupcake-png-cupcake-clipart-cute-clipart-chocolate-free.png" alt="CuppyCake" className="singlePostImg" />
+            <img src="https://thumbs.dreamstime.com/b/rottweiler-puppy-17061311.jpg" alt=""
+            className="singlePostImg"
+             />
             <h1 className="singlePostTitle">
                 Cuppycake buttercup lollipop and gumdrop.
                 <div className="singlePostEdit">

@@ -13,13 +13,15 @@
 .headerTitleSm {
     position: absolute;
     top: 35%;
-    font-size: 30px;
+    font-size: 40px;
+    /* font-weight: bold; */
 }
 
 .headerTitleLg {
     position: absolute;
-    top: 40%;
-    font-size: 60px;
+    top: 45%;
+    font-size: 40px;
+    /* font-weight: bold; */
     font-family: 'Koh Santepheap', cursive;
 }
 

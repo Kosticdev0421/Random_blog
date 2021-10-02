@@ -8,30 +8,34 @@
     flex-direction: column;
 }
 
+/* sidebar items arrangement */
 .sidebarItem {
     display: flex;
     flex-direction:column;
     align-items: center;
 }
 
+/* title styling */
 .sidebarTitle {
     margin: 10px;
     padding: 5px;
     width: 80%;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
-    font-family: 'Stick No Bills', sans-serif;
+    border-top: 2px solid orchid;
+    border-bottom: 2px solid orchid;
+    font-family: 'Koh Santepheap', cursive;
     font-size: 14px;
     font-weight: 600;
-    color: pink;
+    color: slategray;
     line-height: 20px;
     text-align: center;
 }
 
+/* image styling */
 .sidebarItem > img {
     margin-top: 15px;
 }
 
+/* paragraph styling */
 .sidebarItem > p {
     padding: 30px;
 }

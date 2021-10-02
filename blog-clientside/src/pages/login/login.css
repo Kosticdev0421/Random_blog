@@ -11,7 +11,10 @@
 }
 
 .loginTitle {
-    font-size: 50px;
+    font-size: 45px;
+    font-family: 'Koh Santepheap', cursive;
+    /* font-weight: bold; */
+    /* font-style: italic; */
 }
 
 .loginForm {
@@ -26,14 +29,15 @@
 
 .loginInput {
     padding: 10px;
-    background-color: skyblue;
+    background-color: lightgray;
     border: none;
+    border-radius: 10px;
 }
 
 .loginButton {
     margin-top: 20px;
     cursor: pointer;
-    background-color: pink;
+    background-color: orchid;
     border: 1px solid slategray;
     color: black;
     border-radius: 10px;
@@ -44,7 +48,7 @@
     position: absolute;
     top: 60px;
     right: 20px;
-    background-color: pink;
+    background-color: orchid;
     cursor: pointer;
     border: 1px solid slategray;
     border-radius: 10px;

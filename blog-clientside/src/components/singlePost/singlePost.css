@@ -18,8 +18,9 @@
 .singlePostTitle {
     text-align: center;
     margin: 10px;
-    font-family: 'Lora', serif;
-    font-size: 24px;
+    font-family: 'Koh Santepheap', cursive;
+    font-size: 20px;
+    color: orchid;
 }
 
 .singlePostEdit {
@@ -46,13 +47,13 @@
 .singlePostAuthor {
     margin-bottom: 20px;
     display: flex;
-    font-size: 16px;
-    font-family: 'Stick No Bills', sans-serif;
-    color: pink;
+    font-size: 14px;
+    font-family: 'Koh Santepheap', cursive;
+    color: slategray;
 }
 
 .singlePostDescription {
-    color: blue;
+    color:;
     font-size: 18px;
     line-height: 25px;
 }
@@ -61,6 +62,7 @@
     margin-left: 20px;
     font-size: 30px;
     font-weight: 600;
+    color: orchid;
 }
 
 .singlePostInformation {
