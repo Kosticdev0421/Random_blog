@@ -6,22 +6,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Lora', serif;
     color: black;
+    font-family: 'Koh Santepheap', cursive;
 }
 
 .headerTitleSm {
     position: absolute;
-    top: 18%;
+    top: 35%;
     font-size: 30px;
-    /* font-size: 20px  this was the original setting */
 }
 
 .headerTitleLg {
     position: absolute;
-    top: 20%;
-    font-size: 75px;
-    /* font-size: 100px  this was the original setting */
+    top: 40%;
+    font-size: 60px;
+    font-family: 'Koh Santepheap', cursive;
 }
 
 .headerImg {
@@ -30,6 +29,3 @@
     /* margin-top: 80px;  took this out because the top had too much space*/ 
     object-fit: cover;
 }
-
-/* changed Random Thoughts to .headerTitleLg */
-/* changed Blog to .headerTitleSm */
