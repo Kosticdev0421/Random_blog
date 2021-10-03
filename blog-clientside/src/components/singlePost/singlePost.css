@@ -45,7 +45,7 @@
 
 
 .singlePostAuthor {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     display: flex;
     font-size: 14px;
     font-family: 'Koh Santepheap', cursive;
@@ -53,9 +53,10 @@
 }
 
 .singlePostDescription {
-    color:;
+    color: black;
     font-size: 18px;
     line-height: 25px;
+    margin-top: 20px;
 }
 
 .singlePostDescription::first-letter {
@@ -70,6 +71,7 @@
 }
 
 .singlePostDate {
+    margin: bottom 20px;
     
 }
 
