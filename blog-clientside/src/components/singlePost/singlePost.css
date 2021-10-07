@@ -20,7 +20,7 @@
     margin: 10px;
     font-family: 'Koh Santepheap', cursive;
     font-size: 20px;
-    color: orchid;
+    color: green;
 }
 
 .singlePostEdit {
@@ -35,12 +35,12 @@
 
 /* first icon = first child */
 .singlePostIcon:first-child {
-    color: orchid;
+    color: green;
 }
 
 /* second icon = last child, because it is the only other child of the className singlePostIcon */
 .singlePostIcon:last-child {
-    color: blue;
+    color:green;
 }
 
 
@@ -49,7 +49,7 @@
     display: flex;
     font-size: 14px;
     font-family: 'Koh Santepheap', cursive;
-    color: slategray;
+    color: green;
 }
 
 .singlePostDescription {
@@ -63,7 +63,7 @@
     margin-left: 20px;
     font-size: 30px;
     font-weight: 600;
-    color: orchid;
+    color: green;
 }
 
 .singlePostInformation {

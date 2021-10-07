@@ -20,12 +20,12 @@
     margin: 10px;
     padding: 5px;
     width: 80%;
-    border-top: 2px solid orchid;
-    border-bottom: 2px solid orchid;
+    border-top: 2px dotted green;
+    border-bottom: 2px dotted green;
     font-family: 'Koh Santepheap', cursive;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
-    color: slategray;
+    color: black;
     line-height: 20px;
     text-align: center;
 }
@@ -33,6 +33,10 @@
 /* image styling */
 .sidebarItem > img {
     margin-top: 15px;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    border: 2px dotted slategray;
 }
 
 /* paragraph styling */
@@ -61,7 +65,7 @@
 }
 
 .sidebarIcon {
-    font-size: 16px;
+    font-size: 20px;
     margin-left: 10px;
     cursor: pointer;
     

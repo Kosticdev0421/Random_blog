@@ -7,3 +7,5 @@ Step 2: clear out unneeded files
 Step 3: Create your masterpiece
 
 REMINDER: Have fun coding!!
+
+Create a "full stack app" using MongoDB, Express.js, React and Node.js.  A [MERN] app using React hooks and Context API.

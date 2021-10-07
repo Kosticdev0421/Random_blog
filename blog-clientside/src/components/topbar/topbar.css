@@ -52,13 +52,13 @@
     font-size:18px;
     font-weight: 300;
     cursor: pointer;
-    color: slategray;
+    color: black;
 }
 
 /* this styles the magnifying glass */
 .topSearchIcon {
     font-size: 18px;
-    color:orchid;
+    color: green;
     cursor: pointer;
     margin-left: 15px;
     

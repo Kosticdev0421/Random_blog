@@ -5,7 +5,7 @@ export default function Compose() {
 		<div className="compose">
 				<img
 					className="composeImg" 
-					src="https://ih1.redbubble.net/image.2257440794.0814/poster,504x498,f8f8f8-pad,600x600,f8f8f8.jpg" 
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blank_page_intentionally_end_of_book.jpg/350px-Blank_page_intentionally_end_of_book.jpg" 
 					alt="Just-a-girl-who-likes-rottweilers" 
 				/>
 			<form className="composeForm">

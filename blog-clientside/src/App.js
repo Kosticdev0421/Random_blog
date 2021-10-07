@@ -1,5 +1,3 @@
-// Components
-
 import Home from "./pages/home/Home";
 import TopBar from "./components/topbar/TopBar";
 import Single from "./pages/single/Single";
@@ -10,11 +8,13 @@ import Login from "./pages/login/Login";
 
 // Router
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { useContext } from 'react';
+import { Context } from "./context/Context";
 
 
 export default function App() {
   // pseudo user to play with the design portion, no logged in user
-  const user = false;
+  const { user } = useContext(Context);
   return (
     <Router>
       <TopBar />

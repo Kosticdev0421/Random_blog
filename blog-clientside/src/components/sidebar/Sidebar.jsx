@@ -21,8 +21,8 @@ export default function Sidebar() {
 			<div className="sidebarItem">
 				<span className="sidebarTitle">ABOUT ME</span>
 				<img
-					src="https://static.vecteezy.com/system/resources/thumbnails/000/227/854/small/female-developer-vector.jpg"
-					alt="girl-dev"
+					src="https://images.clipartlogo.com/files/istock/previews/8073/80730549-ornate-romantic-pagan-sun-symbol.jpg"
+					alt=""
 				/>
 				<p>
 					Self-control is strength.  Calmness is mastery.  You have to get to the point where your mood doesn't shift based on the insignificant actions of someone else.  Don't allow others to control the direction of your life.  Don't allow your emotions to overpower your intelligence.

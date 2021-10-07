@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     /* background-color: pink; */
-    background: url("https://images.unsplash.com/photo-1602498456745-e9503b30470b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80");
+    background: url("https://media.istockphoto.com/photos/two-tree-branches-with-green-leaves-at-the-edges-on-a-concrete-table-picture-id1270374400?b=1&k=20&m=1270374400&s=170667a&w=0&h=Im8KW0MhQFSlTSYJ9DthYEaDAUSqMds9wO3prjOduHw=");
     background-size: cover;
 }
 
@@ -36,8 +36,8 @@
 .registerButton {
     margin-top: 20px;
     cursor: pointer;
-    background-color: orchid;
-    border: 1px solid slategray;
+    background-color: white;
+    border: 1px solid brown;
     color: black;
     border-radius: 10px;
     padding: 10px;
@@ -47,9 +47,9 @@
     position: absolute;
     top: 60px;
     right: 20px;
-    background-color: orchid;
+    background-color: white;
     cursor: pointer;
-    border: 1px solid slategray;
+    border: 1px solid brown;
     border-radius: 10px;
     padding: 10px;
     color: black;
