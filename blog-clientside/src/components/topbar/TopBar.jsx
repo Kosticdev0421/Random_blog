@@ -13,7 +13,7 @@ export default function TopBar() {
   return (
       <div className="top">
        <div className="topLeft">
-       
+      {/* this div originally contained the icons for social media.  I have relocated those to the bottom which looks more desirable */}
        </div>
        <div className="topCenter">
           <ul className="topList">
@@ -40,7 +40,8 @@ export default function TopBar() {
           user ? (
             <img 
             className="topImg"
-            src="https://lh3.googleusercontent.com/proxy/xzoFm8-Dr2jceL8Ape32OuE0YIRJgwg5PtBAUsf7P3dYvUokX_VWAveKDMUpxir6AoakwYuggtr25Ll3We19TLh0joePPvNYmpbwb_U" alt="" 
+            src={user.profilePicture}
+            alt="" 
           />
           ) : (
             <ul className="topList">

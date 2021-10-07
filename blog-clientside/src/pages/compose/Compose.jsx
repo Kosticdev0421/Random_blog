@@ -1,6 +1,31 @@
+import { useContext, useState } from "react";
 import "./compose.css";
+import axios from "axios";
+import { Context } from "../../context/Context";
 
 export default function Compose() {
+	const [title, setTitle] = useState("");
+	const [description, setDescription] = useState("");
+	const [file, setFile] = useState("");
+	const {user} = useContext(Context);
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		const newPost = {
+			username: user.username,
+			title,
+			description,
+		};
+		if(file) {
+			const data = FormData();
+			// the date.now timestamps the date currently 
+			const filename = Date.now() + file.name;
+			data.append("name", filename);
+			data.append("file", file);
+		}
+		axios.post("/posts", );
+	};
+
 	return (
 		<div className="compose">
 				<img
@@ -8,7 +33,7 @@ export default function Compose() {
 					src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blank_page_intentionally_end_of_book.jpg/350px-Blank_page_intentionally_end_of_book.jpg" 
 					alt="Just-a-girl-who-likes-rottweilers" 
 				/>
-			<form className="composeForm">
+			<form className="composeForm" onSubmit={handleSubmit}>
 				<div className="composeFormGroup">
 					<label htmlFor="fileInput">
 						<i className="composeIcon fa-solid fa-circle-plus"></i>
@@ -32,7 +57,7 @@ export default function Compose() {
 						className="composeInput composeText"
 					></textarea>
 				</div>
-				<button className="composeSubmit">Publish now</button>
+				<button className="composeSubmit" type="submit">Publish now</button>
 			</form>
 		</div>
 	);
