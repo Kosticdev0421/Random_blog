@@ -9,10 +9,10 @@ export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({});
-  const publicFile = "http://localhost:5000/images/";
+  const publicFile = "http://localhost:2000/images/";
   const { user } = useContext(Context);
   const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
+  const [description, setDecription] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export default function SinglePost() {
       const res = await axios.get("/posts/" + path);
       setPost(res.data);
       setTitle(res.data.title);
-      setDescription(res.data.description);
+      setDecription(res.data.description);
     };
     getPost();
   }, [path]);
@@ -39,9 +39,9 @@ export default function SinglePost() {
       await axios.put(`/posts/${post._id}`, {
         username: user.username,
         title,
-        description,
+        description: description,
       });
-      setUpdateMode(false)
+      setUpdateMode(false);
     } catch (err) {}
   };
 
@@ -91,14 +91,14 @@ export default function SinglePost() {
           <textarea
             className="singlePostDescriptionInput"
             value={description}
-            onChange={(e) => setDescription(e.target.value)}
+            onChange={(e) => setDecription(e.target.value)}
           />
         ) : (
           <p className="singlePostDescription">{description}</p>
         )}
         {updateMode && (
           <button className="singlePostButton" onClick={handleUpdate}>
-            Update
+            Modify
           </button>
         )}
       </div>
