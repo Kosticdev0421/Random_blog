@@ -10,6 +10,7 @@ import Login from "./pages/login/Login";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useContext } from 'react';
 import { Context } from "./context/Context";
+import About from "./pages/about/About";
 
 
 export default function App() {
@@ -26,6 +27,10 @@ export default function App() {
         {/* if there is a user go to home IF NOT then go to register */}
           {user ? <Home /> : <Register/>}
         </Route> 
+        <Route path="/about">
+        {/*user logged in goes to settings IF NOT then they have to register */}
+          {user ? <About /> : <Register />}
+        </Route>
         <Route path="/login">
         {/* if user is logged in go home IF NOT then go log in */}
           {user ? <Home /> : <Login />}
@@ -38,6 +43,7 @@ export default function App() {
         {/*user logged in goes to settings IF NOT then they have to register */}
           {user ? <Settings /> : <Register />}
         </Route>
+ 
         <Route path="/post/:postId">
         {/* no conditions needed because everyone can view this single page */}
           <Single />

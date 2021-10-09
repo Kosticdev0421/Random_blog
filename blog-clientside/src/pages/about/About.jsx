@@ -6,7 +6,7 @@ export default function About() {
     return (
         <div className="about">
             <h1>
-                About<span className="full-stop">.</span>
+                About<span className="aboutTitle">.</span>
             </h1>
             <main>
                 <p>
