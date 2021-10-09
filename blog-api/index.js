@@ -7,9 +7,11 @@ const userRoute = require("./routes/users");
 const postRoute = require("./routes/posts");
 const categoryRoute = require("./routes/categories");
 const multer = require("multer");
+const path = require('path');
 
 dotenv.config();
 app.use(express.json());
+app.use("/images", express.static(path.join(__dirname, "/images")));
 
 mongoose
 // this information is secured in my .env file 
@@ -23,9 +25,10 @@ mongoose
 	const storage = multer.diskStorage({
 		destination:(req, file, callback) => {
 			callback(null, "images");
-		}, filename: (req, file, callback) => {
+		}, 
+		filename: (req, file, callback) => {
 			callback(null, req.body.name);
-		}
+		},
 	});
 
 	const upload = multer({storage:storage});

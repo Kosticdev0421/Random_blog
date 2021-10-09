@@ -9,7 +9,7 @@ export default function Compose() {
 	const [file, setFile] = useState("");
 	const {user} = useContext(Context);
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
 		const newPost = {
 			username: user.username,
@@ -17,22 +17,36 @@ export default function Compose() {
 			description,
 		};
 		if(file) {
-			const data = FormData();
+			const data = new FormData();
 			// the date.now timestamps the date currently 
 			const filename = Date.now() + file.name;
 			data.append("name", filename);
 			data.append("file", file);
+			newPost.photo = filename;
+
+			try {
+				await axios.post("/upload", data);
+			} catch (err) {
+			
+			}
 		}
-		axios.post("/posts", );
+		try {
+			const res = await axios.post("/posts",  newPost);
+			window.location.replace("/post" + res.data._id)
+		} catch (err) {
+
+		}
 	};
 
 	return (
 		<div className="compose">
+			{file && (
 				<img
-					className="composeImg" 
-					src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blank_page_intentionally_end_of_book.jpg/350px-Blank_page_intentionally_end_of_book.jpg" 
-					alt="Just-a-girl-who-likes-rottweilers" 
+				className="composeImg" 
+				src={URL.createObjectURL(file)} 
+				alt="" 
 				/>
+			 )}
 			<form className="composeForm" onSubmit={handleSubmit}>
 				<div className="composeFormGroup">
 					<label htmlFor="fileInput">
@@ -42,12 +56,14 @@ export default function Compose() {
 						type="file"
 						id="fileInput"
 						style={{ display: "none" }}
+						onChange={(e) => setFile(e.target.files[0])}
 					/>
 					<input
 						type="text"
 						placeholder="Title"
 						className="composeInput"
 						autoFocus={true}
+						onChange= {e => setTitle(e.target.value)}
 					/>
 				</div>
 				<div className="composeFormGroup">
@@ -55,6 +71,7 @@ export default function Compose() {
 						placeholder="Your story starts here..."
 						type="text"
 						className="composeInput composeText"
+						onChange={e => setDescription(e.target.value)}
 					></textarea>
 				</div>
 				<button className="composeSubmit" type="submit">Publish now</button>
