@@ -4,41 +4,37 @@ import { useContext, useState } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
 
-
 export default function Settings() {
-	
 	const [file, setFile] = useState("");
-	const [Username, setusername] = useState("");
+	const [username, setUsername] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-	
+
 	const { user } = useContext(Context);
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		const updatedUser = {
 			userId: user._id,
+			username,
+			email,
+			password,
 		};
-		if(file) {
+		if (file) {
 			const data = new FormData();
-			// the date.now timestamps the date currently 
+			// the date.now timestamps the date currently
 			const filename = Date.now() + file.name;
 			data.append("name", filename);
 			data.append("file", file);
-			newPost.photo = filename;
+			updatedUser.profilePicture = filename;
 
 			try {
 				await axios.post("/upload", data);
-			} catch (err) {
-			
-			}
+			} catch (err) {}
 		}
 		try {
-			const res = await axios.post("/posts",  newPost);
-			window.location.replace("/post" + res.data._id)
-		} catch (err) {
-
-		}
+			await axios.put("/users" + user._id, updatedUser);
+		} catch (err) {}
 	};
 
 	return (
@@ -52,25 +48,43 @@ export default function Settings() {
 						Delete Your Account
 					</span>
 				</div>
-				<form className="settingsForm">
+				<form className="settingsForm"onSubmit={handleSubmit}>
 					<label>Profile Photo</label>
 					<div className="settingsProfilePicture">
-						<img
-							src={user.profilePicture}
+						<img 
+							src={user.profilePicture} 	
 							alt=""
 						/>
-            <label htmlFor="fileInput">
-            <i className="settingsProfilePictureIcon fa-solid fa-circle-user"></i>
-            </label>
-            <input type="file" id="fileInput" style={{display: "none"}} />
+						<label htmlFor="fileInput">
+							<i className="settingsProfilePictureIcon fa-solid fa-circle-user"></i>
+						</label>
+						<input
+							type="file"
+							id="fileInput"
+							style={{ display: "none" }}
+							onChange={(e) => setFile(e.target.files[0])}
+						/>
 					</div>
-          <label >Username</label>
-          <input type="text" placeholder="Midnightmoet"/>
-          <label >Email</label>
-          <input type="email" placeholder="midnightmoet@gmail.com"/>
-          <label >Password</label>
-          <input type="password"/>
-          <button className="settingsSubmit">Update</button>
+					<label>Username</label>
+					<input 
+						type="text" 
+						placeholder={user.username} 
+						onChange={e  => setUsername(e.target.value)} 
+					/>
+					<label>Email</label>
+					<input 
+						type="email" 
+						placeholder={user.email} 
+						onChange={e => setEmail(e.target.value)} 
+					/>
+					<label>Password</label>
+					<input 
+						type="password" 
+						onChange={e => setPassword(e.target.value)} 
+					/>
+					<button className="settingsSubmit" type="submit">
+						Update
+					</button>
 				</form>
 			</div>
 			<Sidebar />
