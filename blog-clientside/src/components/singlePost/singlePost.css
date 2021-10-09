@@ -1,121 +1,100 @@
 .singlePost {
     flex: 9;
-}
-
-.singlePostWrapper {
+  }
+  
+  .singlePostWrapper {
     padding: 20px;
-    padding-right: 0px;
+    padding-right: 0;
     display: flex;
     flex-direction: column;
-}
-
-.singlePostImg {
+  }
+  
+  .singlePostImg {
     width: 100%;
     height: 300px;
     border-radius: 15px;
     object-fit: cover;
-}
-
-.singlePostTitle {
+  }
+  
+  .singlePostTitle {
     text-align: center;
     margin: 10px;
     font-family: 'Koh Santepheap', cursive;
     font-size: 20px;
-    color: green;
-}
-
-.singlePostTitleInput {
+  }
+  
+  .singlePostTitleInput {
     margin: 10px;
     font-family: 'Koh Santepheap', cursive;
-    font-size: 20px;
-    color: green;
+    font-size: 28px;
+    text-align: center;
     border: none;
-    border-bottom: 1px dotted green;
-}
-
-.singleTitleInput:focus {
+    color: green;
+    border-bottom: 1px solid lightgray;
+  }
+  
+  .singlePostTitleInput:focus {
     outline: none;
-}
-
-.singlePostEdit {
+  }
+  
+  .singlePostEdit {
     float: right;
     font-size: 16px;
-}
-
-.singlePostIcon {
+  }
+  
+  .singlePostIcon {
     margin-left: 10px;
     cursor: pointer;
-}
-
-/* first icon = first child */
-.singlePostIcon:first-child {
-    color: green;
-}
-
-/* second icon = last child, because it is the only other child of the className singlePostIcon */
-.singlePostIcon:last-child {
-    color:green;
-}
-
-
-.singlePostAuthor {
-    margin-bottom: 15px;
-    display: flex;
-    font-size: 14px;
-    font-family: 'Koh Santepheap', cursive;
-    color: green;
-}
-
-.singlePostButton {
-    width: 100px;
-    border: none;
-    background-color: green;
-    padding:10px;
-    color: white;
-    border-radius: 15px;
-    cursor: pointer;
-    align-self: flex-end;
-    margin-top: 20px;
   }
-
-.singlePostDescription {
-    color: black;
-    font-size: 18px;
-    line-height: 25px;
-    margin-top: 20px;
-}
-
-.singlePostDescription::first-letter {
-    margin-left: 20px;
-    font-size: 30px;
-    font-weight: 600;
+  
+  .singlePostIcon:first-child {
     color: green;
-}
-
-.singlePostDescriptionInput {
-    border: none;
-    color: black;
-    font-size: 18px;
-    line-height: 25px;
-    margin-top: 20px;
-    
-}
-
-.singlePostDescriptionInput:focus {
-    outline: none;
-}
-
-.singlePostInformation {
+  }
+  
+  .singlePostIcon:last-child {
+    color: red;
+  }
+  
+  .singlePostInfo {
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     font-size: 16px;
     font-family: 'Koh Santepheap', cursive;
-    color: #b39656;
-}
-
-.singlePostDate {
-    margin: bottom 20px;
-    
-}
-
+    color: green;
+  }
+  
+  .singlePostDescription {
+    color: black;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  
+  .singlePostDescription::first-letter {
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    color: green;
+  }
+  
+  .singlePostDescriptionInput {
+    border: none;
+    color: black;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  
+  .singlePostDescriptionInput:focus {
+    outline: none;
+  }
+  .singlePostButton {
+    width: 100px;
+    border: 3px solid lightgreen;
+    background-color: green;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-top: 15px;
+  }

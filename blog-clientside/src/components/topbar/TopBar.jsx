@@ -34,15 +34,17 @@ export default function TopBar() {
             </li>
           </ul>  
        </div>
-       <div className="topRight">
+       <div className="topRight" to="/settings">
        {/*this controls what is seen.  If user, show profile pic OR show the login register option */}
         {
           user ? (
-            <img 
-            className="topImg"
-            src={user.profilePicture}
-            alt="" 
-          />
+            <Link>
+              <img 
+              className="topImg"
+              src={user.profilePicture}
+              alt="" 
+              />
+            </Link>
           ) : (
             <ul className="topList">
               <li className="topListItem">

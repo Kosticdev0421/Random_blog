@@ -39,7 +39,7 @@ export default function SinglePost() {
       await axios.put(`/posts/${post._id}`, {
         username: user.username,
         title,
-        description: description,
+        description,
       });
       setUpdateMode(false);
     } catch (err) {}

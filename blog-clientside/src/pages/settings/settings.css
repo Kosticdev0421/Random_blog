@@ -18,12 +18,12 @@
 
 .settingsUpdateTitle {
     font-size: 30px;
-    margin-bottom: 20px;
-    color: pink;
+    margin-bottom: 8px;
+    color: green;
 }
 
 .settingsDeleteTitle {
-    color:blue;
+    color: red;
     font-size: 14px;
     cursor: pointer;
 }
@@ -51,8 +51,8 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: black;
-    color:pink;
+    background-color: green;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,7 +70,7 @@
     margin: 10px 0px;
     height: 30px;
     border: none;
-    border-bottom:2px solid pink;
+    border-bottom:2px solid green;
 }
 
 .settingsSubmit {
@@ -78,8 +78,8 @@
     align-self: center;
     border: none;
     border-radius: 10px;
-    color: black;
-    background-color: pink;
+    color: white;
+    background-color: green;
     padding: 10px;
     margin-top: 20px;
     cursor: pointer;

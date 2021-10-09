@@ -35,6 +35,7 @@
     height: 45px;
     border-radius: 50%;
     object-fit: cover;
+    cursor: pointer;
 }
 
 /* This takes the vertical list and makes it horizontal */
