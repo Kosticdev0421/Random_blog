@@ -1,5 +1,6 @@
 .compose {
     padding-top: 50px;
+   
 
 }
 
@@ -13,6 +14,7 @@
 
 .composeForm {
     position: relative;
+    
 }
 
 .composeFormGroup {
@@ -40,6 +42,7 @@
     border: none;
     padding: 20px;
     width: 70vw;
+   
 }
 
 .composeInput:focus {

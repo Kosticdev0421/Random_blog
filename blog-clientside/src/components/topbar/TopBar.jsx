@@ -38,7 +38,7 @@ export default function TopBar() {
         {user ? (
           <Link to="/settings">
           {/* adding publicFile +  to the source should fix the profile pic issue, but it didn't */}
-            <img className="topImg" src={ user.profilePicture} alt="" />
+            <img className="topImg" src={publicFile+ user.profilePicture} alt="" />
           </Link>
         ) : (
           <ul className="topList">
