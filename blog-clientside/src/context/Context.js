@@ -1,3 +1,4 @@
+// tested
 import { createContext, useReducer, useEffect } from 'react';
 import Reducer from './Reducer';
 

@@ -1,3 +1,4 @@
+// tested
 import axios from 'axios';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
@@ -52,7 +53,9 @@ export default function Register() {
 					placeholder="Enter your password"
 					onChange={e => setPassword(e.target.value)}
 				/>
-				<button type="submit"className="registerButton">Register</button>
+				<button type="submit"className="registerButton">
+					Register
+				</button>
 			</form>
 			<button className="registerLoginButton">
 				<Link className= "link" to="/login">Login</Link>

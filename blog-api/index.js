@@ -1,3 +1,4 @@
+// tested, changed what didn't work
 const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
@@ -7,40 +8,42 @@ const userRoute = require("./routes/users");
 const postRoute = require("./routes/posts");
 const categoryRoute = require("./routes/categories");
 const multer = require("multer");
-const path = require('path');
+const path = require("path");
 
 dotenv.config();
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
 mongoose
-// this information is secured in my .env file 
-	.connect(process.env.MONGODB_URL, {
-		useNewUrlParser: true,
-		useUnifiedTopology: true,
-	})
-	.then(console.log("Connected to MongoDB"))
-	.catch((err) => console.log(err));
+  .connect(process.env.MONGODB_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+	// these two threw error that wouldn't clear.
+    // useCreateIndex: true,
+    // useFindAndModify:true
+  })
+  .then(console.log("Connected to MongoDB"))
+  .catch((err) => console.log(err));
 
-	const storage = multer.diskStorage({
-		destination:(req, file, callback) => {
-			callback(null, "images");
-		}, 
-		filename: (req, file, callback) => {
-			callback(null, req.body.name);
-		},
-	});
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, "images");
+  },
+  filename: (req, file, cb) => {
+    cb(null, req.body.name);
+  },
+});
 
-	const upload = multer({storage:storage});
-	app.post("/api/upload", upload.single("file"), (req,res) => {
-		res.status(200).json("File successfully uploaded ...");
-	});
+const upload = multer({ storage: storage });
+app.post("/api/upload", upload.single("file"), (req, res) => {
+  res.status(200).json("File has been uploaded");
+});
 
-	app.use("/api/auth", authRoute);
-	app.use("/api/users", userRoute);
-	app.use("/api/posts", postRoute);
-	 app.use("/api/categories", categoryRoute);
+app.use("/api/auth", authRoute);
+app.use("/api/users", userRoute);
+app.use("/api/posts", postRoute);
+app.use("/api/categories", categoryRoute);
 
 app.listen("2000", () => {
-	console.log("Backend is running!!");
+  console.log("Backend is running.");
 });

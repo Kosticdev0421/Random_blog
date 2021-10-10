@@ -1,70 +1,70 @@
+// tested and changed some things
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
-import './topbar.css';
+import "./topbar.css";
 
 export default function TopBar() {
   const { user, dispatch } = useContext(Context);
+  const publicFile = "http://localhost:2000/images/";
 
   const handleLogout = () => {
-    dispatch({ type: "LOGOUT"});
+    dispatch({ type: "LOGOUT" });
   };
-
   return (
-      <div className="top">
-       <div className="topLeft">
-      {/* this div originally contained the icons for social media.  I have relocated those to the bottom which looks more desirable */}
-       </div>
-       <div className="topCenter">
+    <div className="top">
+      <div className="topLeft">
+        {/* moved the social icons */}
+      </div>
+      <div className="topCenter">
+        <ul className="topList">
+          <li className="topListItem">
+            <Link className="link" to="/">
+              HOME
+            </Link>
+          </li>
+          <li className="topListItem">
+            <Link className="link" to="/">
+              ABOUT
+            </Link>
+          </li>
+          {/* <li className="topListItem">
+            <Link className="link" to="/">
+              CONTACT
+            </Link>
+          </li>*/}
+          <li className="topListItem">
+            <Link className="link" to="/compose">
+              COMPOSE
+            </Link>
+          </li>
+          <li className="topListItem" onClick={handleLogout}>
+            {user && "LOGOUT"}
+          </li>
+        </ul>
+      </div>
+      <div className="topRight">
+        {user ? (
+          <Link to="/settings">
+          {/* adding publicFile +  to the source should fix the profile pic issue */}
+            <img className="topImg" src={ user.profilePicture} alt="" />
+          </Link>
+        ) : (
           <ul className="topList">
             <li className="topListItem">
-              <Link className="link" to="/">HOME</Link>
+              <Link className="link" to="/login">
+                LOGIN
+              </Link>
             </li>
             <li className="topListItem">
-              <Link className="link" to="/about">ABOUT</Link>
+              <Link className="link" to="/register">
+                REGISTER
+              </Link>
             </li>
-            {/*<li className="topListItem">
-              <Link className="link" to="/contact">CONTACT</Link>
-             </li>*/}
-            <li className="topListItem">
-              <Link className="link" to="/compose">COMPOSE</Link>
-            </li>
-            <li className="topListItem" onClick = {handleLogout}> 
-              {user && "LOGOUT"}
-            </li>
-          </ul>  
-       </div>
-       <div className="topRight" to="/settings">
-       {/*this controls what is seen.  If user, show profile pic OR show the login register option */}
-        {
-          user ? (
-            <Link>
-              <img 
-              className="topImg"
-              src={user.profilePicture}
-              alt="" 
-              />
-            </Link>
-          ) : (
-            <ul className="topList">
-              <li className="topListItem">
-                <Link className="link" to="/login">
-                  LOGIN
-                </Link>
-              </li>
-              <li className="topListItem">
-                <Link className="link" to="/register">
-                  REGISTER  
-                </Link>
-              </li>
-            </ul>
-          )
-        }
-          
-          <i className="topSearchIcon fas fa-search"></i>
-
-       </div>
+          </ul>
+        )}
+        <i className="topSearchIcon fas fa-search"></i>
       </div>
-  )
- 
+    </div>
+  );
 }

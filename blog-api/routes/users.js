@@ -1,3 +1,4 @@
+// tested: minor changes
 const router = require("express").Router();
 const User = require("../models/User");
 const Post = require("../models/Post");
@@ -44,7 +45,7 @@ router.delete("/:id", async (req,res) => {
 			res.status(404).json("User not found!!");
 		}
 	} else {
-		res.status(401).json("You can only delete your account!");
+		res.status(401).json("Silly human, you can only delete your account!");
 	}
 });
 

@@ -1,3 +1,4 @@
+// tested
 import "./settings.css";
 import Sidebar from "../../components/sidebar/Sidebar";
 import { useContext, useState } from "react";
@@ -12,6 +13,7 @@ export default function Settings() {
 	const [success, setSuccess] = useState(false);
 
 	const { user, dispatch } = useContext(Context);
+	// tried to add this to the image src but it threw an error.  Figure this out later 
 	const publicFile = "http://localhost:2000/images/";
 
 	const handleSubmit = async (e) => {
@@ -56,7 +58,8 @@ export default function Settings() {
 					<label>Profile Photo</label>
 					<div className="settingsProfilePicture">
 						<img 
-							src={user.profilePicture} 	
+						
+							src={file ? URL.createObjectURL(file) : user.profilePicture} 	
 							alt=""
 						/>
 						<label htmlFor="fileInput">

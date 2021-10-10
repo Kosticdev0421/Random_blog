@@ -1,3 +1,4 @@
+// tested: 10/10
 const mongoose = require("mongoose");
 
 const CategorySchema = new mongoose.Schema(

@@ -1,16 +1,17 @@
+// fixed some confusing names.  Come back to make social buttons clickable (Goal)
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "./sidebar.css";
 
 export default function Sidebar() {
-    const [ cats, setCat ] = useState([]);
+    const [ categories, setCategory ] = useState([]);
 
     useEffect(() => {
         const getCategories = async () => 
         {
             const res = await axios.get("/categories");  
-            setCat(res.data);  
+            setCategory(res.data);  
         };
         getCategories();
     }, [] );
@@ -31,15 +32,15 @@ export default function Sidebar() {
             <div className="sidebarItem">
                <span className="sidebarTitle">CATEGORIES</span>
                <ul className="sidebarList">
-                {cats.map((c) => (
-                    <Link to={`/?cat= ${c.name}`} className="link">
+                {categories.map((c) => (
+                    <Link to={`/?category= ${c.name}`} className="link">
                          <li className="sidebarListItem">{c.name}</li>
                     </Link>
                 ))}
                </ul>
             </div>
             <div className="sidebarItem">
-            <span className="sidebarTitle">FOLLOW US!</span>
+            <span className="sidebarTitle">FOLLOW ME!</span>
             <div className="sidebarSocial">
                 <i className="sidebarIcon fab fa-facebook-square"></i>
                 <i className="sidebarIcon fab fa-twitter-square"></i>

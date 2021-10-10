@@ -1,3 +1,4 @@
+/* fixed className  */
 .post {
    width: 385px;
     margin: 0px 25px 40px 25px;
@@ -17,7 +18,7 @@
     align-items: center;
 }
 
-.postCategories {
+.postCategory {
     font-family: 'Koh Santepheap', cursive;
     font-size: 14px;
     color: turquoise;
