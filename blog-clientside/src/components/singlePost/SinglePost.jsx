@@ -13,7 +13,7 @@ export default function SinglePost() {
   const publicFile = "http://localhost:2000/images/";
   const { user } = useContext(Context);
   const [title, setTitle] = useState("");
-  const [description, setDecription] = useState("");
+  const [description, setDescription] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export default function SinglePost() {
       const res = await axios.get("/posts/" + path);
       setPost(res.data);
       setTitle(res.data.title);
-      setDecription(res.data.description);
+      setDescription(res.data.description);
     };
     getPost();
   }, [path]);
@@ -92,7 +92,7 @@ export default function SinglePost() {
           <textarea
             className="singlePostDescriptionInput"
             value={description}
-            onChange={(e) => setDecription(e.target.value)}
+            onChange={(e) => setDescription(e.target.value)}
           />
         ) : (
           <p className="singlePostDescription">{description}</p>

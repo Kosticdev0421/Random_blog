@@ -24,17 +24,7 @@ export default function TopBar() {
               HOME
             </Link>
           </li>
-          <li className="topListItem">
-            <Link className="link" to="/">
-              ABOUT
-            </Link>
-          </li>
-          {/* <li className="topListItem">
-            <Link className="link" to="/">
-              CONTACT
-            </Link>
-          </li>*/}
-          <li className="topListItem">
+           <li className="topListItem">
             <Link className="link" to="/compose">
               COMPOSE
             </Link>
@@ -47,7 +37,7 @@ export default function TopBar() {
       <div className="topRight">
         {user ? (
           <Link to="/settings">
-          {/* adding publicFile +  to the source should fix the profile pic issue */}
+          {/* adding publicFile +  to the source should fix the profile pic issue, but it didn't */}
             <img className="topImg" src={ user.profilePicture} alt="" />
           </Link>
         ) : (

@@ -21,13 +21,7 @@
 .topCenter {
     flex: 6;
 }
-/* moved the icons to the bottom/sidebar which was more pleasing to the eye */
-/* .topIcon {
-    font-size: 20px;
-    margin-right: 10px;
-    color: #444;
-    cursor: pointer;
-} */
+
 
 /* this covers the <img> element */
 .topImg {

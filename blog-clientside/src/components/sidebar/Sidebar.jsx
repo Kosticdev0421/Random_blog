@@ -42,10 +42,15 @@ export default function Sidebar() {
             <div className="sidebarItem">
             <span className="sidebarTitle">FOLLOW ME!</span>
             <div className="sidebarSocial">
-                <i className="sidebarIcon fab fa-facebook-square"></i>
-                <i className="sidebarIcon fab fa-twitter-square"></i>
-                <i className="sidebarIcon fab fa-pinterest-square"></i>
-                <i className="sidebarIcon fab fa-instagram-square"></i>
+                <ul>
+                    <li><a href="https://www.facebook.com/lisa.miner2010"><i className="sidebarIcon fab fa-facebook-square"></i></a></li>
+
+                    <li><a href="https://twitter.com/midnightmoet"><i className="sidebarIcon fab fa-twitter-square"></i></a></li>
+
+                    <li><a href="https://www.instagram.com/lisa.miner/"><i className="sidebarIcon fab fa-instagram-square"></i></a></li>
+                    
+                    <li><a href="https://www.linkedin.com/in/lisachampagne/"><i className="sidebarIcon fa-brands fa-linkedin"></i></a></li>
+                </ul>
             </div>
             </div>
 		</div>

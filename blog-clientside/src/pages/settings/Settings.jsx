@@ -50,9 +50,9 @@ export default function Settings() {
 					<span className="settingsUpdateTitle">
 						Update Your Account
 					</span>
-					<span className="settingsDeleteTitle">
+					{/* <span className="settingsDeleteTitle">
 						Delete Your Account
-					</span>
+					</span> */}
 				</div>
 				<form className="settingsForm"onSubmit={handleSubmit}>
 					<label>Profile Photo</label>
@@ -63,7 +63,7 @@ export default function Settings() {
 							alt=""
 						/>
 						<label htmlFor="fileInput">
-							<i className="settingsProfilePictureIcon fa-solid fa-circle-user"></i>
+							<i className="settingsProfilePictureIcon fa-solid fa-user-ninja"></i>
 						</label>
 						<input
 							type="file"
