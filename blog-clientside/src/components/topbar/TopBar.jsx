@@ -6,6 +6,7 @@ import "./topbar.css";
 
 export default function TopBar() {
   const { user, dispatch } = useContext(Context);
+  // for some reason adding the PF makes the images break, investigate //
   const publicFile = "http://localhost:2000/images/";
 
   const handleLogout = () => {

@@ -1,4 +1,3 @@
-// tested, took out a const line
 const router = require("express").Router();
 const User = require("../models/User");
 const Post = require("../models/Post");
@@ -71,15 +70,15 @@ router.get("/:id", async (req, res) => {
 //GET ALL POSTS
 router.get("/", async (req, res) => {
   const username = req.query.user;
-  const categoryName = req.query.cat;
+  const catName = req.query.cat;
   try {
     let posts;
     if (username) {
       posts = await Post.find({ username });
-    } else if (categoryName) {
+    } else if (catName) {
       posts = await Post.find({
         categories: {
-          $in: [categoryName],
+          $in: [catName],
         },
       });
     } else {

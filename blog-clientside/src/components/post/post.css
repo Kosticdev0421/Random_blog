@@ -1,4 +1,3 @@
-/* fixed className  */
 .post {
    width: 385px;
     margin: 0px 25px 40px 25px;
@@ -18,7 +17,7 @@
     align-items: center;
 }
 
-.postCategory {
+.postCat {
     font-family: 'Koh Santepheap', cursive;
     font-size: 14px;
     color: turquoise;
@@ -26,6 +25,10 @@
     margin-top: 15px;
     margin-right: 10px;
     cursor: pointer;
+}
+
+.postCats {
+    
 }
 
 .postTitles {
@@ -45,7 +48,7 @@
 }
 
 /* this section I used -webkit to make it so not all text is visible but is still there.  Lines 53-57 handle this feature. */
-.postDescription {
+.postDesc {
     font-family: 'Lora', serif;
     font-size: 14px;
     color: black;
