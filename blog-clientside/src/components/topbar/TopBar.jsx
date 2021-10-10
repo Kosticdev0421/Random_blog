@@ -23,9 +23,9 @@ export default function TopBar() {
             <li className="topListItem">
               <Link className="link" to="/about">ABOUT</Link>
             </li>
-            <li className="topListItem">
+            {/*<li className="topListItem">
               <Link className="link" to="/contact">CONTACT</Link>
-            </li>
+             </li>*/}
             <li className="topListItem">
               <Link className="link" to="/compose">COMPOSE</Link>
             </li>

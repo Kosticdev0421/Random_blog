@@ -9,11 +9,14 @@ export default function Settings() {
 	const [username, setUsername] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+	const [success, setSuccess] = useState(false);
 
-	const { user } = useContext(Context);
+	const { user, dispatch } = useContext(Context);
+	const publicFile = "http://localhost:2000/images/";
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+		dispatch({ type: "UPDATE_START"});
 		const updatedUser = {
 			userId: user._id,
 			username,
@@ -34,6 +37,7 @@ export default function Settings() {
 		}
 		try {
 			await axios.put("/users/" + user._id, updatedUser);
+			setSuccess(true);
 		} catch (err) {}
 	};
 
@@ -85,6 +89,7 @@ export default function Settings() {
 					<button className="settingsSubmit" type="submit">
 						Update
 					</button>
+					{success && <span style={{color: "limegreen", textAlign: "center", marginTop: "15px"}}>Profile has been updated...</span>}
 				</form>
 			</div>
 			<Sidebar />

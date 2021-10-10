@@ -5,34 +5,28 @@ import './about.css';
 export default function About() {
     return (
         <div className="about">
-            <h1>
-                About<span className="aboutTitle">.</span>
-            </h1>
-            <main>
-                <p>
-                    add text here
-                </p>
-                <p>
-                    add text here
-                </p>
+            <h1><span className="aboutTitle">About</span></h1>
+            <main className="aboutParagraph">
                 <p>
                     You can edit your Blog post at any time, as long as you're
                     logged in. If you ever feel like your post is no longer a
                     valid representation of your thoughts, you can also delete
                     it at any instant of time.
                 </p>
+
+                <br/>
+
                 <p>
-                    You can also provide your opinions about any post, in the
-                    comments' section of every post, anonymously!
-                    <br />
-                    Your comment will always have a unique icon accompanying it.
+                    Planning to add a comment section as this blog evolves.
                 </p>
-                <hr className="gold-hr" />
+
+                <br/>
+
                 <p>
                     If you ever feel the need to provide criticism or drop a
                     suggestion, or if you just want to say "Nice job", feel free
-                    to contact me using the links in the footer
-                    <span className="full-stop">.</span>
+                    to contact me using the contact page.
+                   
                 </p>
             </main>
         </div>
