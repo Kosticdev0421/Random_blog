@@ -14,7 +14,7 @@
 
 <h2>Goals</h2>
 <ol>
-1. Obtain my Full Stack Developer certification
-2. Keep adding projects to my GitHub as I complete them.
+1. Obtain my Full Stack Developer certification <br>
+2. Keep adding projects to my GitHub as I complete them. <br>
 3. Skip down my path in my new career.
 </ol>
